@@ -1,0 +1,390 @@
+body {
+    background: #f9f9f9;
+}
+a:hover{
+    text-decoration: none;
+    color:black
+}
+#bg {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.navbar {
+    padding: 15px 30px;
+    background: #252525
+}
+
+.nav-left {
+    position: absolute;
+    top: 15px;
+    left: 30px
+}
+
+.nav-right {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.search {
+    position: relative;
+    width: 670px;
+    height: 50px;
+    background: #121212;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px
+}
+
+.search p {
+    color: #919191;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.search p:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    background: url(img/nav3.jpg);
+    width: 143px;
+    height: 63px;
+    background-size: cover;
+    top: -10px;
+    right: -140px
+}
+
+.left-side {
+   width: 300px;
+    vertical-align: top;
+    display: inline-block;
+/*
+      height: 100vh;
+    overflow:hidden
+*/
+}
+
+.left-side img {
+    width: 100%
+}
+
+.channel-sec {
+    width: calc(100% - 305px);
+    display: inline-block;
+    vertical-align: top;
+       background: #f1f1f1;
+}
+
+.channel-banner {
+    height: 240px;
+    width: 100%;
+    display: block;
+    background: url(img/ChannelBanner.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative
+}
+
+.channel-sec .cha-container {
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    position: relative;
+    min-height: 1000px
+}
+.channel-banner:after{
+   content: "";
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 194px;
+    background: #f9f9f9;
+    top: 240px;
+}
+
+.channel-title p {
+    display: inline-block;
+    margin: 0;
+    margin-left: 30px;
+    font-size: 28px;
+    line-height: 1.1;
+    vertical-align: middle;
+}
+
+.channel-title p span {
+    color: grey;
+    font-size: 18px;
+
+}
+
+.channel-title img {
+    border: solid 1px;
+    border-radius: 55px;
+    width: 100px
+}
+
+.cha-container .nav {
+    max-width: 750px;
+    margin-top: 10px
+}
+
+.nav-item a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #030303;
+    font-size: 18px;
+    opacity: 0.8;
+    border-bottom: solid 2px transparent;
+    transition: all .3s ease
+}
+
+.nav-item a:hover {
+    background: #e6e6e6;
+    text-decoration: none
+}
+
+.nav-item a.active {
+    opacity: 1;
+    border-bottom: solid 3px #8f8f8f
+}
+.nav-item:last-child a{
+    pointer-events: none;
+    padding: 0
+}
+.tab-content {
+    position: relative;
+    margin: 30px 10px
+}
+
+.tab-content h6 {
+    font-size: 20px;
+    position: relative;
+    
+}
+.tab-content .playall{
+    padding-left: 30px;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    color: black
+}
+.tab-content .playall:before{
+    content: "";
+    display:inline-block;
+    padding-right: 15px;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 8px 0 8px 13px;
+border-color: transparent transparent transparent #606060;
+}
+.tab-content .upload {
+    border-bottom: solid 1px #b1b1b1;
+    margin-bottom: 35px
+}
+
+.tab-content .upload:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.tab-content .vid-5 {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    margin: 20px 0;
+    display: block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: all .3s ease
+}
+
+.tab-content .vid-5 img {
+    max-width: 100%
+}
+
+.tab-content .vid-title {
+    font-size: 18px;
+    margin-top: 10px
+}
+
+.tab-content .grey {
+    color: #606060;
+    font-size: 15px;
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.vid-5 .time {
+    display: block;
+    position: absolute;
+    color: white;
+    background: black;
+    padding: 3px 4px;
+    border-radius: 3px;
+    z-index: 2;
+   right: 5%;
+    bottom: 39%;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.vid-5 .hover {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.vid-5:hover .hover{
+    opacity: 1
+}
+/*播放清單*/
+#list:after {
+    content: "";
+    display: block;
+    clear: both
+}
+#list .img-con{
+    display: block;
+    position: relative
+}
+#list .black-bg{
+    position: absolute;
+    width: 42%;
+    background: rgb(0 0 0 / 80%);
+    height: 100%;
+    z-index: 2;
+    right: 0;
+    top: 0
+}
+#list .black-bg p{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 28%;
+    font-weight: 600;
+    font-size: 19px;
+    text-align: center;
+    color: white
+}
+#list .black-bg img{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 55%
+}
+#list .all{
+   color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 27%;
+    text-align: center;
+    opacity: 0;
+    z-index: 3
+}
+
+
+#list .all:before{
+    content: "";
+    display:inline-block;
+    padding-right: 15px;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 8px 0 8px 13px;
+border-color: transparent transparent transparent white;
+    opacity: 0;
+    position: relative;
+     z-index: 3
+}
+#list .vid-5:hover .all,#list .vid-5:hover .all:before{
+    opacity: 1
+}
+#list .vid-5:hover img{
+    filter: brightness(0.2);
+}
+/*頻道*/
+.channel-con:after {
+    content: "";
+    display: block;
+    clear: both
+}
+.channel-con{
+      border-bottom: solid 1px #b1b1b1;
+        margin-bottom: 20px
+}
+.channel-5{
+      float: left;
+    width: 20%;
+    padding: 5px;
+    margin: 20px 0;
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    position: relative;
+      margin-bottom: 35px;
+}
+.channel-5 img{
+       margin-bottom: 10px;
+    width: 130px;
+    height: 130px;
+    border-radius: 80px;
+}
+.channel-5 p{
+    font-size: 19px;
+    margin-bottom: 5px
+}
+.channel-5 span{
+    color: black;
+    padding: 5px 10px;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    background: #e5e5e5;
+    color: #606060;
+    margin-top: 10px
+}
+.channel-5 a:hover p{
+    color: black
+}
+/*簡介*/
+#intro p{
+    margin-top: 30px
+}
+#intro .col-sm-4 h6{
+     border-bottom: solid 1px #b1b1b1;
+    margin-bottom: 15px;
+    padding-bottom: 15px
+}
+
+@media screen and (max-width:1500px){
+    .left-side {
+   width: 250px;
+}
+
+    .tab-content .vid-title{
+        font-size: 16px
+    }
+    .channel-sec{
+        width: calc(100% - 255px);
+    }
+    .tab-content h6{
+        font-size: 18px
+    }
+}
