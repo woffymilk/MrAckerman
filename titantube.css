@@ -1,0 +1,550 @@
+body{
+    background: #f9f9f9; 
+    overflow-x: hidden;
+    overflow-y:scroll
+}
+.scroll::-webkit-scrollbar-track
+{
+	
+	background-color: rgba(255,255,255,0);
+}
+
+.scroll::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	  background-color: #898989;
+    transition: all .3s ease
+}
+
+#bg{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    top: -39px;
+}
+
+.navbar {
+    padding: 15px 30px;
+    background: #252525;
+    min-height: 80px;
+        position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0
+}
+
+.nav-left{
+ position: absolute;
+    top: 15px;
+    left: 30px
+}
+.nav-right{
+    position: absolute;
+     top: 15px;
+    right: 30px;
+}
+.search {
+    position: relative;
+    width: 35%;
+    height: 50px;
+    background: #121212;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px
+}
+.search p{
+   color: #919191;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.search p:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    background: url(img/nav3.jpg);
+    width: 143px;
+    height: 63px;
+    background-size: cover;
+    top: -10px;
+    right: -140px
+        
+}
+
+
+.film{
+    background: #000000;
+    margin-top: 80px;
+    position: relative
+}
+.carousel-inner{
+    width: 1200px;
+    margin: 0 auto
+}
+.carousel-indicators{
+    opacity: 0;
+       margin: 0;
+    padding-bottom: 60px;
+    bottom: 0;
+    background: rgb(0 0 0 / 35%);
+    transition: all .3s ease
+}
+.film:hover .carousel-indicators{
+    opacity: 1
+}
+.carousel-indicators li{
+    margin: 0;
+    width: 20%;
+    background: red;
+    position: relative;
+    height: 6px
+}
+.carousel-indicators li.active{
+    background: red
+}
+.carousel-indicators li.active ~ li{
+    background: #cacaca
+}
+.carousel-indicators li.active:after{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background: red;
+    right: 0;
+    left: auto;
+    top: -6px;
+    border-radius: 15px;
+}
+.carousel-control-prev,.carousel-control-next{
+    z-index: 99
+}
+.carousel-control-prev-icon{
+   background: url(img/arrow-left.png) no-repeat;
+    width: 20px;
+    height: 30px;
+    background-size: contain;
+}
+.carousel-control-next-icon{
+       background: url(img/arrow-right.png) no-repeat;
+    width: 20px;
+    height: 30px;
+    background-size: contain;
+}
+.control{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+   z-index: 101;
+    width: 100%;
+    transition: all .3s ease
+}
+.film:hover .control{
+    opacity: 1
+}
+.control .next,.control .button-toggle{
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle
+}
+.control .button-toggle{
+    width: 76px;
+    overflow: hidden;
+    height: 60px;
+    cursor: pointer;
+}
+.control .button-toggle .playButton{
+    display: none
+}
+.control p{
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    margin: 0
+}
+.control-right{
+    position: absolute;
+    right: 0
+}
+.carousel-inner .playButton,.carousel-inner .pauseButton{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all .3s ease
+}
+.playButton img,.pauseButton img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top:23%;
+      opacity: 0;
+    animation-name: fadeout;
+    animation-duration: 1s
+}
+@keyframes fadeout{
+    0%{
+        opacity: 0
+    }
+    20%{
+        opacity: 0.8
+    }
+    100%{
+        opacity: 0
+    }
+}
+.playButton{
+ display:none
+}
+.pauseButton{
+  display:  block
+}
+
+.txt-section{
+    padding: 40px 100px;
+    position: relative
+}
+.txt-section .join{
+    position: absolute;
+    right: 0;
+    top: 20px
+}
+.txt-section h3{
+    font-size: 24px;
+    margin-bottom: 20px
+}
+.txt-section  .watched{
+    font-size: 18px;
+    color: #606060;
+    padding-bottom: 15px;
+}
+.txt-section .likebutton{
+    position: absolute;
+    right: 0;
+    top: 43px;
+}
+.flex-container{
+    display: none;
+    justify-content:space-around;
+        margin-bottom: 15px;
+}
+.txt-section .likebutton img{
+    display: inline-block
+}
+.title-section{
+        padding: 15px;
+    padding-bottom: 25px;
+    position: relative;
+    border-bottom: solid 1px #c9c9c9;
+    border-top: solid 1px #c9c9c9;
+}
+.profile-img{
+       width: 60px;
+    display: inline-block;
+    border-radius: 30px;
+    border: solid 1px #8d8d8d;
+}
+.title-section .txt{
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 6px;
+    vertical-align: top;
+    position: relative;
+        width: calc(100% - 75px);
+}
+.title-section .txt p{
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+.title-section .txt a:hover{
+    text-decoration: none;
+    color: #007bff
+}
+.title-section .txt > p:first-child{
+    font-size: 19px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.title-section .txt span{
+    font-size: 17px;
+    color: #6a6a6a;
+    font-weight: 300
+}
+
+.title-section .expand_word{
+    font-weight: 100;
+    font-size: 16px;
+     margin-top: 30px;
+    cursor: pointer
+}
+.title-section .expand{
+    margin-top: 15px;
+    display: none
+}
+.title-section .expand_word span:first-child{
+    display: block
+}
+.title-section .expand_word span:last-child{
+    display: none
+}
+.title-section .expand_word.active span:first-child{
+    display: none
+}
+.title-section .expand_word.active span:last-child{
+    display:block
+}
+
+.comment h6{
+     font-size: 20px;
+    padding: 10px;
+    padding-top: 20px;
+}
+.comment h6 img{
+    display: inline-block;
+    margin-right: 5px;
+}
+.comment .leave {
+    margin-bottom: 30px
+}
+.comment .leave img{
+    width: 50px;
+    margin-right: 15px
+}
+.comment .leave input{
+    border: none;
+    background: none;
+    font-size: 18px;
+    width: calc(100% - 70px);
+    border-bottom: solid 1px #b1b1b1;
+    pointer-events: none
+}
+.old-comment{
+margin-bottom: 10px
+}
+.comment .profile-img{
+    width: 50px;
+    margin-right: 10px;
+    display: inline-block
+}
+.comment .old-comment-txt{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 65px);
+}
+.comment .old-comment-txt p{
+    margin: 0;
+    font-size: 17px
+}
+.comment .old-comment-txt p:first-child{
+    margin-bottom: 5px
+}
+.comment .old-comment-txt span{
+    font-size: 14px;
+    margin-left: 10px;
+}
+.comment .reply{
+    margin-left: 50px
+}
+.comment .reply .profile-img{
+    width: 35px
+}
+.comment .good{
+    display: block;
+    margin: 10px 0
+}
+.comment .closed{
+    text-align: center;
+    margin: 40px 0;
+}
+.click{
+    cursor: pointer;
+    color: grey;
+    
+}
+.click_expand{
+      display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.click_expand.active{
+    overflow: auto;
+    display: block
+}
+.click span:first-child,.click.active span:last-child{
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 16px
+}
+.click span:last-child,.click.active span:first-child{
+    display: none
+}
+
+.right{
+    overflow-x: hidden
+}
+.right .col-md-5{
+    position: relative
+}
+.right .col-md-5 p{
+   display: block;
+    position: absolute;
+    color: white;
+    background: black;
+    padding: 3px 4px;
+    border-radius: 3px;
+    z-index: 2;
+    right: 20px;
+    bottom: 5px;
+    font-size: 15px;
+    line-height: 1;
+    margin: 0;
+    font-weight: 600;
+    transition: all .3s ease
+}
+.right .hover{
+    position: absolute;
+    right: 20px;
+    top: 3px;
+    opacity: 0;
+    transition: all .3s ease
+}
+.right a{
+    display: block
+}
+.right .bar{
+    margin-bottom: 15px;
+    height: 40px;
+    max-width: none;
+}
+.right img{
+        max-width: 100%;
+}
+.right .col-md-6:last-child{
+    padding: 0
+}
+.right p:first-child{
+    font-size: 17px
+}
+.right p{
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 5px;
+      display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.right .section .grey{
+     color: #606060;
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+.right .section{
+    margin-bottom: 15px;
+    color: black
+}
+.right .section:hover{
+    text-decoration: none;
+}
+.right .section:hover img{
+    transition: all .3s ease;
+    filter: brightness(0.9)
+}
+.right .section:hover .hover{
+    opacity: 0.9
+}
+
+@media screen and (max-width:1600px){
+    .txt-section{
+            padding: 40px 10px;
+    }
+    .txt-section .likebutton img{
+        height: 40px
+    }
+}
+@media screen and (max-width:1360px){
+    .watched .hidden{
+        display: none
+    }
+    .carousel-inner{
+        width: 80%
+    }
+}
+@media screen and (max-width:1200px){
+
+    .txt-section .likebutton{
+        display: none
+    }
+}
+@media screen and (max-width:768px){
+    .search,.right .bar{
+        display: none
+    }
+   .txt-section {
+    padding:20px 10px;
+}
+    
+    .right .col-md-6:last-child{
+          padding: 5px 15px
+    }
+    .title-section .join {
+    width: 130px;
+}
+    .txt-section h3{
+        font-size: 20px
+    }
+    .playButton img, .pauseButton img{
+            width: 70px;
+    }
+    
+    .control-right{
+        display: none
+    }
+    .flex-container{
+    display: flex;
+    justify-content:space-around;
+        margin-bottom: 15px;
+}
+    .txt-section .watched{
+        padding: 0
+    }
+     .watched .hidden{
+        display:inline-block
+    }
+}
+@media screen and (max-width:480px){
+    .nav-right{
+        display: none
+    }
+    .nav-item a{
+        font-size: 16px
+    }
+    .nav-fill .nav-item:last-child{
+        display: none
+    }
+   
+}
+@media screen and (max-width:400px){
+    .channel-title img.join{
+        display: none
+    }
+    .tab-content .vid-5{
+        width: 100%
+    }
+    .vid-5 .time{
+        bottom: 28%
+    }
+}
