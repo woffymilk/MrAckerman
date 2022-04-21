@@ -34,7 +34,7 @@ body{
     min-height: 80px;
         position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 105;
     top: 0
 }
 
