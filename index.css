@@ -221,7 +221,7 @@ a:hover{
     
 }
 .tab-content .playall{
-    padding-left: 30px;
+    padding-left: 20px;
     display: inline-block;
     top: 0;
     left: 0;
@@ -548,7 +548,9 @@ border-color: transparent transparent transparent white;
         font-size: 14px
     }
     #list .vid-5{
-        height: 170px
+        height: auto;
+    float: none;
+        width: 100%;
     }
     .channel-sec .cha-container{
         padding: 30px 15px
@@ -556,6 +558,9 @@ border-color: transparent transparent transparent white;
     .tab-content h6 {
     font-size: 16px;
 }
+    .channel-5{
+        min-height: 265px
+    }
 }
 @media screen and (max-width:400px){
     .channel-title img.join{
@@ -566,5 +571,11 @@ border-color: transparent transparent transparent white;
     }
     .vid-5 .time{
         bottom: 28%
+    }
+    .channel-5{
+        width: 50%
+    }
+    .tab-content .vid-title{
+        min-height: 0
     }
 }
