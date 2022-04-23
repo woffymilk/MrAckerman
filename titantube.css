@@ -84,7 +84,8 @@ body{
 }
 .carousel-inner{
     width: 1200px;
-    margin: 0 auto
+    margin: 0 auto;
+    min-height: 670px
 }
 .carousel-indicators{
     opacity: 0;
