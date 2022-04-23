@@ -481,7 +481,8 @@ margin-bottom: 10px
         display: none
     }
     .carousel-inner{
-        width: 80%
+        width: 80%;
+        min-height: 0
     }
 }
 @media screen and (max-width:1200px){
