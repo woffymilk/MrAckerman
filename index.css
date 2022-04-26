@@ -6,6 +6,9 @@ a:hover{
     text-decoration: none;
     color:black
 }
+.main{
+    display: flex
+}
 #bg {
     position: absolute;
     z-index: -1;
